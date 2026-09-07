@@ -1,0 +1,76 @@
+
+// TODO: Ver como modelar/implementar ya que es de 16 caracteres 2 lineas, no es por pixeles.
+
+class LCDDisplay: public Display {
+
+  private:    
+
+    static constexpr unsigned short chars = 16;
+
+    static constexpr unsigned short lines = 2;
+
+    unsigned short pin_sda;  
+
+    unsigned short pin_scl;
+  
+
+  public:
+
+    void draw() = 0; // TODO: Ver como implementar, ya que solo puede mostrar ASCII por posicion
+
+};
+
+
+class Joystick { 
+  // TODO: Implementar deadzone, etc
+
+  private:
+
+    unsigned short pin_vrx;
+
+    unsigned short pin_vry;
+
+
+  public:
+
+};
+
+
+class ButtonBox {
+
+  private:
+
+    unsigned short pin_c1;
+
+    unsigned short pin_r1;
+
+    unsigned short pin_c2;
+
+    unsigned short pin_r2;
+
+    unsigned short pin_c3;
+
+    unsigned short pin_r3;
+
+    unsigned short pin_c4;
+
+    unsigned short pin_r4;
+
+
+  public:
+
+};
+
+
+class PassiveBuzzer {
+
+  private:
+
+    unsigned short pin_gpio;
+
+    unsigned short volume;
+
+
+  public:
+
+};
